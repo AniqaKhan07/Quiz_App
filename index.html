@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Welcome Screen -->
+        <div class="screen welcome-screen active">
+            <div class="welcome-content">
+                <div class="welcome-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h1>Welcome to QuizMaster!</h1>
+                <p>Test your knowledge and challenge yourself with our interactive quizzes</p>
+                <button class="btn start-btn">Start Quiz</button>
+            </div>
+        </div>
+
+        <!-- Category Selection -->
+        <div class="screen category-screen">
+            <h2>Select Quiz Category</h2>
+            <div class="categories">
+                <div class="category" data-category="html">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="category" data-category="css">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="category" data-category="javascript">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="category" data-category="react">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="category" data-category="express">
+                    <i class="fas fa-server"></i>
+                    <span>Express</span>
+                </div>
+                <div class="category" data-category="mongodb">
+                    <i class="fas fa-database"></i>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+            <button class="btn back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+
+        <!-- Question Count Selection -->
+        <div class="screen count-screen">
+            <h2>Select Number of Questions</h2>
+            <div class="question-counts">
+                <div class="count-option" data-count="10">10</div>
+                <div class="count-option" data-count="15">15</div>
+                <div class="count-option" data-count="20">20</div>
+                <div class="count-option" data-count="25">25</div>
+            </div>
+            <button class="btn back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen quiz-screen">
+            <div class="quiz-header">
+                <div class="quiz-info">
+                    <span class="category-name">Category: HTML</span>
+                    <span class="question-count">Question 1 of 10</span>
+                </div>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <span class="time">30s</span>
+                </div>
+            </div>
+            <div class="question-container">
+                <div class="question-text">Loading question...</div>
+                <div class="options-container">
+                    <!-- Options will be inserted here by JavaScript -->
+                </div>
+            </div>
+            <div class="quiz-footer">
+                <button class="btn next-btn" disabled>Next Question <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen results-screen">
+            <div class="results-content">
+                <div class="result-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2>Quiz Completed!</h2>
+                <div class="score-container">
+                    <div class="score-circle">
+                        <div class="score-text">
+                            <span class="correct-answers">0</span>/<span class="total-questions">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="score-details">
+                    <div class="detail correct">
+                        <span class="detail-label">Correct:</span>
+                        <span class="detail-value correct-count">0</span>
+                    </div>
+                    <div class="detail wrong">
+                        <span class="detail-label">Wrong:</span>
+                        <span class="detail-value wrong-count">0</span>
+                    </div>
+                    <div class="detail accuracy">
+                        <span class="detail-label">Accuracy:</span>
+                        <span class="detail-value accuracy-percent">0%</span>
+                    </div>
+                </div>
+                <div class="feedback-message">
+                    <!-- Feedback message will be inserted here -->
+                </div>
+                <div class="result-buttons">
+                    <button class="btn restart-btn"><i class="fas fa-redo"></i> Restart Quiz</button>
+                    <button class="btn home-btn"><i class="fas fa-home"></i> Back to Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
